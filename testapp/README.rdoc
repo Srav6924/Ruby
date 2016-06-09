@@ -1,28 +1,17 @@
-== README
+Things I did is setup an EC2 instance on AWS and Auto scale it.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Auto scaling is done so that the application and setup will never be down.
 
-Things you may want to cover:
+Next the application is developed on rails and also Sinatra (3000 and 4567 respectively) 
 
-* Ruby version
+For resilient feature I used Unicorn. The Unicorn web server lets you run any Rails application concurrently by running multiple Ruby processes in a single dyno.
 
-* System dependencies
+For Auto deployment and maintenance I have used Nginx and Capistrano.
+Configure Nginx to distribute the load on TCP
 
-* Configuration
+Changes to the application's source code can be automatically tested before they are merged into the master branch by using gem modules associated with Capistrano.
+Here Every time you are ready to deploy a new version of your application, you need to:
+•	Commit and push all changes to your Git repository.
+•	Run the Capistrano deploy command.
+Bundle exec cap production deploy
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
