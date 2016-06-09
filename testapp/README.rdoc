@@ -11,7 +11,12 @@ Configure Nginx to distribute the load on TCP
 
 Changes to the application's source code can be automatically tested before they are merged into the master branch by using gem modules associated with Capistrano.
 Here Every time you are ready to deploy a new version of your application, you need to:
+
+
+
 •	Commit and push all changes to your Git repository.
+
 •	Run the Capistrano deploy command.
+----
 Bundle exec cap production deploy
 
