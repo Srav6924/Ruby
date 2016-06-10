@@ -7,8 +7,8 @@
 
 lock '3.3.5'
 
-set :application, 'spui'
-set :repo_url, 'git@github.com:MYGITHUB/MYAPP.git'
+set :application, 'testapp'
+set :repo_url, 'https://github.com/Srav6924/Ruby/tree/master/testapp.git'
 
 ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
